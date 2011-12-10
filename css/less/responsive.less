@@ -1,0 +1,61 @@
+/*
+ * responsive.less
+ * ===============
+ * Defines layouts for modern browsers with wider screens
+ * ------------------------------------------------------
+ *
+ * Should be only used in responsive designs,
+ * otherwise it's enough to define layout in base.less
+ * 
+ * Should be loaded only by browsers that support media queries
+ *
+ * ----------------------------------------------------------------- */
+
+
+/*-------------------------------------------------------*\
+	INITIALIZE
+
+	Declare LESS variables and mixins (LESS Functions)
+\*-------------------------------------------------------*/
+// Variables
+@import 'app/variables.less';     			// Custom colors, font-sizes, etc
+
+// Mixins - LESS Functions
+@import 'pool/mixins/grid.less';  			// Grid mixins - only required if you are using grid
+@import 'pool/mixins/clearfix.less';		// Clearfix mixins
+@import 'pool/mixins/debug.less';			// Debugging mixins
+
+
+/*-------------------------------------------------------*\
+	MAIN
+
+	Use media queries to assign different layouts
+\*-------------------------------------------------------*/
+// Preload layouts mixins 
+@import 'app/layouts/480up.less';
+@import 'app/layouts/600up.less';
+@import 'app/layouts/768up.less';
+@import 'app/layouts/992up.less';
+@import 'app/layouts/1382up.less';
+
+// Assign layouts to different screen sizes
+/* 480px */
+@media only screen and (min-width: 480px) {
+	.480up();
+}
+/* 600px */
+@media only screen and (min-width: 600px) {
+  .600up();
+}
+/* 768px */
+@media only screen and (min-width: 768px) {
+  .768up();
+}
+/* 992px */
+@media only screen and (min-width: 992px) {
+  .992up();
+}
+/* 1382px */
+@media only screen and (min-width: 1382px) {
+  .1382up();
+}
