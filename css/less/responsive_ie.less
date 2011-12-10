@@ -5,7 +5,7 @@
  * ------------------------------------------
  *
  * Should be only used in responsive designs,
- * otherwise it's enough to define layout in base.less
+ * otherwise it should be enough to define layout in base.less
  *
  * Should be loaded only by IE8 and below
  *
@@ -18,7 +18,7 @@
 	Declare LESS variables and mixins (LESS Functions)
 \*-------------------------------------------------------*/
 // Variables
-@import 'app/variables.less';     			// Custom colors, font-sizes, etc.
+@import 'pool/variables.less';     			// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
 @import 'pool/mixins/grid.less';  			// Grid mixins - only required if you are using grid
@@ -31,5 +31,5 @@
 
 	Use LESS variables and functions to define the layout
 \*-------------------------------------------------------*/
-@import 'app/layouts/992up.less';
+@import 'pool/layouts/992up.less';
 .992up();

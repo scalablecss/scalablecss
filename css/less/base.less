@@ -1,46 +1,56 @@
 /*
  * base.less
  * =========
- * Big mothership that carries all the components
- * ----------------------------------------------
+ * Base stylesheet
+ * ---------------
  *
  *
- * NOTE #1: Feel free to load/unload components in this file
+ * Feel free to load/unload components in this file
+ *
+ * Note that "pool" directory contains basic components
+ * that are reusable from project to project. By default,
+ * all components are loaded from pool, however, if you
+ * require to modify/customize one of them, copy and paste
+ * it into "app" directory and modify as required.
+ *
+ * When any pool component is updated, you can easily track
+ * the difference between app/ and pool/ versions to decide
+ * whether you want to replace one with another
+ * Additionally, you can easily test updated component
+ * by changing the 'path' in your staging stylesheet.
+ *
+ * If you can think of any component suitable for pool,
+ * that is not there yet, feel free to pull request
+ *
  * 
- * NOTE #2: Do NOT load components from inside other components
- * 		    ..by doing so you may lose control over them
+ * Do NOT load components from inside other components
+ *	  ..by doing so you may lose control over them
  *
- * NOTE #3: For non-responsive design this file should contain
- *			everything you need
+ * For non-responsive design this file should contain
+ *	  everything you need in most cases
  *
- * NOTE #4: For responsive design, it's recommended to load here layout
- * 		 	that is suited to small-screen devices
- *			and add 2 external stylesheets to the page:
- *				1) Stylesheet that contains various layouts
+ * For responsive design, it's recommended to load layout
+ * 	  that is suited to small-screen devices in this stylesheet
+ *	  and add 2 external stylesheets:
+ *	  	1) Stylesheet that contains various layouts
  * 				   wrapped in media queries
- *				3) IE8 and below specific stylesheet that contains
+ *		3) IE8 and below specific stylesheet that contains
  *				   one layout
- *			more details can be found here: http://nicolasgallagher.com/mobile-first-css-sass-and-ie/
+ *	  for more details read this article:
+ *	  	http://nicolasgallagher.com/mobile-first-css-sass-and-ie/
  *
  * ----------------------------------------------------------------- */
 
 
-/*-------------------------------------------------------*\
+/*-------------------------------------------------------------------*\
 	INITIALIZE
 
 	Declare LESS variables and mixins (LESS Functions)
 	Most of the customization usually is done here
-	This will not be outputed in compiled stylesheet
-
-	NOTE: Do NOT customize files in POOL folder
-	      Instead copy them to the same path in APP folder
-	      And customize there as you wish
-	      If you think you improved/fixed bug
-	      Make sure to push commit to the pool repo
-
-\*-------------------------------------------------------*/
+	This will not be outputted in compiled stylesheet "as is"
+\*-------------------------------------------------------------------*/
 // Variables
-@import 'app/variables.less';     			// Custom colors, font-sizes, etc.
+@import 'pool/variables.less';     			// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
 @import 'pool/mixins/prefixes.less';  		// Prefixes for browser vendors
@@ -49,21 +59,21 @@
 @import 'pool/mixins/debug.less';			// Debugging mixins
 
 
-/*-------------------------------------------------------*\
+/*-------------------------------------------------------------------*\
 	COMBINE ASSETS
 
 	Combine ASSETS that are using LESS
 	Variables and Functions	to style the page
-	This will be outputed in compiled stylesheet
-	You can split this part to as many files as you wish
-\*-------------------------------------------------------*/
+	This will be outputted in compiled stylesheet as is
+	You can split this part into as many files as you need
+\*-------------------------------------------------------------------*/
 // Main styling
 @import 'pool/assets/normalize.less'; 				// CSS Normalize
-@import 'app/assets/typography.less';    			// Fonts declarations
-@import 'app/assets/style.less';         			// Elements-specific styles
+@import 'pool/assets/typography.less';    			// Fonts declarations
+@import 'pool/assets/style.less';         			// Elements-specific styles
 
 // Screen Layout
-@import 'app/layouts/320up.less'; 			// For responsive design, use layout suited to small-screen devices
+@import 'pool/layouts/320up.less'; 			// For responsive design, use layout suited to small-screen devices
 .320up();                         			// For modern browsers we will add media queries in a separate file
 											// For old IE we will overwrite this layout with another one
 											// For non-responsive design, just load your only layout here
@@ -72,12 +82,12 @@
 @import 'pool/assets/print.less'; 					// Inlined to avoid required HTTP connection: h5bp.com/r
 
 
-/*-------------------------------------------------------*\
+/*-------------------------------------------------------------------*\
 	ADD MODULES & HELPERS
 
 	Undependent components that have no relationship
 	with other components
-\*-------------------------------------------------------*/
+\*-------------------------------------------------------------------*/
 // Helpers - undependent small reusable CSS snippets consisting of pure CSS only
 // These shouldn't be used by other .less files, only by classes in HTML markup
 // Example:     .left { text-align: left; }
