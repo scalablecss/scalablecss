@@ -1,9 +1,9 @@
 /*
  * app/mixins/grid.less 
  * ====================
- * A bunch of useful mixins used to define the grid
+ * Useful mixins used to define the layout
  *
- * http://semantic.gs
+ * Source: http://semantic.gs
  *
  * ----------------------------------------------------------------- */
 
@@ -12,19 +12,20 @@
         width: @total-width*(((@gutter-width+@column-width)*@x) / @_gridsystem-width);
 }
 
-
 .row(@columns:@columns) {
         display: inline-block;
         width: @total-width*((@gutter-width + @_gridsystem-width)/@_gridsystem-width);
         margin: 0 @total-width*(((@gutter-width*.5)/@_gridsystem-width)*-1);
         .clearfix;
 }
+
 .column(@x,@columns:@columns) {
         display: inline;
         float: left;
         width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @_gridsystem-width);
         margin: 0 @total-width*((@gutter-width*.5)/@_gridsystem-width);
 }
+
 .offset(@offset:1) {
         margin-left: (@gutter-width+@column-width)*@offset + @total-width*((@gutter-width*.5)/@_gridsystem-width);
 }
