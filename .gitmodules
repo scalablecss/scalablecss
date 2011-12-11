@@ -1,3 +1,0 @@
-[submodule "less/pool"]
-	path = less/pool
-	url = git@github.com:scalablecss/pool.git

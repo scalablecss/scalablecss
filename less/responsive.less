@@ -21,9 +21,9 @@
 @import 'app/variables.less';     			// Custom colors, font-sizes, etc
 
 // Mixins - LESS Functions
-@import 'pool/mixins/grid.less';  			// Grid mixins - only required if you are using grid
-@import 'pool/mixins/clearfix.less';		// Clearfix mixins
-@import 'pool/mixins/debug.less';			// Debugging mixins
+@import 'app/mixins/grid/grid.less';  			// Grid mixins - only required if you are using grid
+@import 'app/mixins/clearfix/clearfix.less';			// Clearfix mixins
+@import 'app/mixins/debug/debug.less'; 		// Debugging mixins
 
 
 /*-------------------------------------------------------------------*\
@@ -32,11 +32,11 @@
 	Use media queries to assign layouts to different screens
 \*-------------------------------------------------------------------*/
 // Preload layouts mixins 
-@import 'pool/layouts/480up.less';
-@import 'pool/layouts/600up.less';
-@import 'pool/layouts/768up.less';
-@import 'pool/layouts/992up.less';
-@import 'pool/layouts/1382up.less';
+@import 'app/layouts/480up.less';
+@import 'app/layouts/600up.less';
+@import 'app/layouts/768up.less';
+@import 'app/layouts/992up.less';
+@import 'app/layouts/1382up.less';
 
 // Assign layouts to different screen sizes
 /* 480px */

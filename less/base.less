@@ -53,33 +53,32 @@
 @import 'app/variables.less';     			// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
-@import 'pool/mixins/prefixes.less';  		// Prefixes for browser vendors
-@import 'pool/mixins/grid.less';  			// Grid mixins - only required if your layout is using grid
-@import 'pool/mixins/clearfix.less';		// Clearfix
-@import 'pool/mixins/debug.less';			// Debugging mixins
+@import 'app/mixins/grid/grid.less';  		// Grid mixins - only required if your layout is using grid
+@import 'app/mixins/clearfix/clearfix.less';// Clearfix
+@import 'app/mixins/debug/debug.less'; 		// Debugging mixins
 
 
 /*-------------------------------------------------------------------*\
-	COMBINE ASSETS
+	COMBINE FRAMGENTS
 
-	Combine ASSETS that are using LESS
+	Combine FRAMGENTS that are using LESS
 	Variables and Functions	to style the page
 	This will be outputted in compiled stylesheet as is
 	You can split this part into as many files as you need
 \*-------------------------------------------------------------------*/
 // Main styling
-@import 'pool/assets/normalize.less'; 				// CSS Normalize
-@import 'pool/assets/typography.less';    			// Fonts declarations
-@import 'pool/assets/styles.less';         			// Elements-specific styles
+@import 'app/fragments/normalize.css';      // Normalize browser CSS default styles
+@import 'app/fragments/typography.less';    // Typography styles
+@import 'app/fragments/styles.less';        // Elements-specific styles
 
 // Screen Layout
-@import 'pool/layouts/320up.less'; 			// For responsive design, use layout suited to small-screen devices
+@import 'app/layouts/320up.less'; 			// For responsive design, use layout suited to small-screen devices
 .320up();                         			// For modern browsers we will add media queries in a separate file
 											// For old IE we will overwrite this layout with another one
 											// For non-responsive design, just load your only layout here
 
 // Print styles
-@import 'pool/assets/print.less'; 					// Inlined to avoid required HTTP connection: h5bp.com/r
+@import 'app/fragments/print.less'; 			// Inlined to avoid required HTTP connection: h5bp.com/r
 
 
 /*-------------------------------------------------------------------*\
@@ -90,11 +89,10 @@
 \*-------------------------------------------------------------------*/
 // Helpers - undependent small reusable CSS snippets consisting of pure CSS only
 // These shouldn't be used by other .less files, only by classes in HTML markup
-// Example:     .left { text-align: left; }
-@import 'pool/helpers/island.less'; 		// "island" content abstraction helper
-@import 'pool/helpers/spacers.less'; 		// Spacing helpers like 'ptn', 'mln' etc.
+// Helper Example:     	.left { text-align: left; }
+// Load Example: 		@import 'pool/helpers/helper_name/helper_name.less';
 
 // Modules - undependent UI elements
 // These shouldn't be used by other .less files, only by classes and IDs in HTML markup
-// Example:		a "media object" with an image to the left and descriptive content to the right
-@import 'pool/modules/button/button.less'; 	// Pure CSS button module
+// Module Example:		a "media object" with an image to the left and descriptive content to the right
+// Load Example: 		@import 'pool/modules/module_name/module_name.less';

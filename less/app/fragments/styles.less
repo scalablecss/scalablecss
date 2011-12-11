@@ -1,0 +1,91 @@
+/*
+ * pool/assets/style.less
+ * ======================
+ * Elements-specific styling
+ * -------------------------
+ *
+ * This file is your main playground
+ * But try not to define layout in this file
+ * Keep layout styling in a separate files (see base.less to find layout files)
+ *
+ * Try to use here as many variables as possible, this should add customizability 
+ * 
+ * ---------------------------------------------------------------------------- */
+
+
+/*------------------------------------*\
+	CONTENTS
+\*------------------------------------*/
+/*
+MAIN
+HEADER
+CONTENT
+FOOTER
+MISC
+*/
+
+
+
+
+
+
+/*------------------------------------*\
+	$MAIN
+\*------------------------------------*/
+body {	
+	// Fixes annoying "jumping" effect when window is resized
+	// Is required in responsible design
+	width: 100%;
+	.clearfix();
+}
+
+// Because we are using media queries to
+// change layout sizing it's nice to have
+// elements move smother on window resize
+body, img {
+	transition: all .2s linear;
+	-o-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+}
+
+a {
+	color: @linkColor;
+}
+a:hover {
+	color: @linkColorHover;
+}
+
+
+/*------------------------------------*\
+	$HEADER
+\*------------------------------------*/
+#top {
+	background: #CEDBEB;
+}
+
+
+/*------------------------------------*\
+	$CONTENT
+\*------------------------------------*/
+#maincolumn {
+	background: grey;
+}
+#sidebar {
+	background: grey;
+}
+
+
+/*------------------------------------*\
+	$FOOTER
+\*------------------------------------*/
+#footer {
+	background: #CEDBEB;
+}
+
+
+/*------------------------------------*\
+	$MISC
+\*------------------------------------*/
+::selection		 { background-color: #4a8ec2; color: #fff; }
+::-moz-selection { background-color: #4a8ec2; color:#fff; }

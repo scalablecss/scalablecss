@@ -21,9 +21,9 @@
 @import 'app/variables.less';     			// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
-@import 'pool/mixins/grid.less';  			// Grid mixins - only required if you are using grid
-@import 'pool/mixins/clearfix.less';		// Clearfix mixins
-@import 'pool/mixins/debug.less';			// Debugging mixins
+@import 'app/mixins/grid/grid.less';  			// Grid mixins - only required if you are using grid
+@import 'app/mixins/clearfix/clearfix.less';			// Clearfix mixins
+@import 'app/mixins/debug/debug.less'; 		// Debugging mixins
 
 
 /*-------------------------------------------------------------------*\
@@ -31,5 +31,5 @@
 
 	Assign layout for IE
 \*-------------------------------------------------------------------*/
-@import 'pool/layouts/992up.less';
+@import 'app/layouts/992up.less';
 .992up();
