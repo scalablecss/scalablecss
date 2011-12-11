@@ -1,8 +1,8 @@
 ScalableCSS
 ====================
 
-ScalableCSS is CSS framework based on LESS CSS preprocessor (http://lesscss.org). It is not a Grid System, instead it allows you to use any Grid System you like if you need any at all.
-It's main purpose is to let you manage and extend website's stylesheets as you would manage your PHP/Ruby/NodeJS application. Well, it's maybe not perfect but it tries hard.
+ScalableCSS is CSS framework based on LESS CSS preprocessor (http://lesscss.org). It comes by default with customized Semantic Grid System (http://semantic.gs), however you can use any Grid System you like instead if you need any at all.
+It's main purpose is to let you manage and extend website's stylesheets easily.
 
 Code and comments are self explanatory so you should feel fine by reading through the source. A good starting point is 'less/base.less', which is an example of root stylesheet file. You can create multiple siblings of base.less and all of them will use the same codebase which is highly flexible when it comes to managing multiple stylesheets. However, in most cases it's recommended to have only one stylesheet (like base.less) per website for non-responsive designs. Read the comments in base.less for more info.
 
