@@ -1,7 +1,7 @@
 ScalableCSS
 ====================
 
-ScalableCSS is CSS framework based on LESS CSS preprocessor (http://lesscss.org). It's main purpose is to let you manage and extend website's stylesheets easily.
+ScalableCSS is a CSS framework based on LESS CSS preprocessor (http://lesscss.org). It's main purpose is to let you manage and extend website's stylesheets easily.
 
 It comes with integrated customized version of Semantic Grid System (http://semantic.gs) by default, however you can use any Grid System you like instead if you need any at all.
 
