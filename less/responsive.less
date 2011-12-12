@@ -4,8 +4,8 @@
  * Defines layouts for modern browsers with wider screens
  * ------------------------------------------------------
  *
- * Should be only used in responsive designs,
- * otherwise it should be enough to define layout in base.less
+ * Is only used in responsive designs
+ * In regular design it should be enough to define layout in base.less
  * 
  * Should be loaded only by browsers that support media queries
  *
@@ -21,9 +21,7 @@
 @import 'app/variables.less';     			// Custom colors, font-sizes, etc
 
 // Mixins - LESS Functions
-@import 'app/mixins/grid/grid.less';  			// Grid mixins - only required if you are using grid
-@import 'app/mixins/clearfix/clearfix.less';			// Clearfix mixins
-@import 'app/mixins/debug/debug.less'; 		// Debugging mixins
+@import 'app/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
 
 
 /*-------------------------------------------------------------------*\
