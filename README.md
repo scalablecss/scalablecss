@@ -7,6 +7,16 @@ It comes with integrated customized version of Semantic Grid System (http://sema
 
 Code and comments are self explanatory so you should feel fine by reading through the source. A good starting point is 'less/base.less', which is an example of root stylesheet file. You can create multiple siblings of base.less and all of them will use the same codebase which is highly flexible when it comes to managing multiple stylesheets. However, in most cases it's recommended to have only one stylesheet (like base.less) per website for non-responsive designs. Read the comments in base.less for more info.
 
+Installation
+--------------------
+
+``` html
+git clone git://github.com/scalablecss/scalablecss.git scalablecss
+git cd scalablecss
+git submodule init
+git submodule update
+```
+
 Credits
 --------------------
 
