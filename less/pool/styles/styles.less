@@ -40,19 +40,19 @@ body {
 /*------------------------------------*\
 	$HEADER
 \*------------------------------------*/
-#top {
-	background: #CEDBEB;
+#header {
+	background: @header-background-color;
 }
 
 
 /*------------------------------------*\
 	$CONTENT
 \*------------------------------------*/
-#maincolumn {
-	background: #EDEDED;
+#main {
+	background: @main-background-color;
 }
 #sidebar {
-	background: #EDEDED;
+	background: @sidebar-background-color;
 }
 
 
@@ -60,12 +60,12 @@ body {
 	$FOOTER
 \*------------------------------------*/
 #footer {
-	background: #CEDBEB;
+	background: @footer-background-color;
 }
 
 
 /*------------------------------------*\
 	$MISC
 \*------------------------------------*/
-::selection		 { background-color: #4a8ec2; color: #fff; }
-::-moz-selection { background-color: #4a8ec2; color:#fff; }
+::selection		 { background-color: @selection-background-color; color: @selection-font-color; }
+::-moz-selection { background-color: @selection-background-color; color: @selection-font-color; }

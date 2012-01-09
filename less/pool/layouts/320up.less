@@ -6,13 +6,20 @@
 
  .320up(){
 	
-	body { .width(24); margin: 0 auto; }
+	body {
+		font-size: 14px;
+		margin: 0 auto;
+		text-align: center;
+	}
 
-    .one-full { .column(24); }
-	.one-half { .column(24); }
-	.one-third { .column(24); }
-	.two-third { .column(24); }
-	.one-quarter { .column(24); }
+    #header,
+	#main,
+	#footer,
+	.one-full,
+	.one-half,
+	.one-third,
+	.two-third,
+	.one-quarter { width: 100%; .clearfix(); }
 
     .debugmessage("media query (320>) fired", orange);
         

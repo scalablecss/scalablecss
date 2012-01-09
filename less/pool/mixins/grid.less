@@ -11,22 +11,25 @@
 /*-------------------------------------------------------------------*\
         Common Grid functions
 \*-------------------------------------------------------------------*/
-.width (@x:1) {
-        width: @total-width*(((@gutter-width+@column-width)*@x) / @_gridsystem-width);
+
+.width (@x:1, @from-width: @total-width) {
+        width: @from-width*(((@gutter-width+@column-width)*@x) / @_gridsystem-width);
 }
 
-.row(@columns:@columns) {
+.row() {
         display: inline-block;
         width: @total-width*((@gutter-width + @_gridsystem-width)/@_gridsystem-width);
         margin: 0 @total-width*(((@gutter-width*.5)/@_gridsystem-width)*-1);
         .clearfix;
 }
 
-.column(@x,@columns:@columns) {
-        display: inline;
-        float: left;
-        width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @_gridsystem-width);
-        margin: 0 @total-width*((@gutter-width*.5)/@_gridsystem-width);
+.column(@x:1, @from-width: @total-width) {
+    float: left;
+    .width (@x, @from-width);
+}
+
+.column-margin(@from-width: @total-width) {
+        margin: 0 @from-width*((@gutter-width*.5)/@_gridsystem-width);
 }
 
 .offset(@offset:1) {
