@@ -12,22 +12,32 @@
  * ----------------------------------------------------------------- */
 
 
+/*------------------------------------*\
+	CONTENTS
+\*------------------------------------*/
+/*
+INITIALIZE
+DEFINE LAYOUT FOR IE
+*/
+
+
+
+
+
 /*-------------------------------------------------------------------*\
 	INITIALIZE
 
 	Declare LESS variables and mixins (LESS Functions)
 \*-------------------------------------------------------------------*/
 // Variables
-@import 'app/variables.less';     			// Custom colors, font-sizes, etc.
+@import 'pool/variables/variables.less';     			// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
-@import 'app/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
+@import 'pool/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
 
 
 /*-------------------------------------------------------------------*\
-	MAIN
-
-	Assign layout for IE
+	DEFINE LAYOUT FOR IE
 \*-------------------------------------------------------------------*/
-@import 'app/layouts/992up.less';
+@import 'pool/layouts/992up.less';
 .992up();

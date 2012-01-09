@@ -6,6 +6,12 @@
  *
  *
  * Feel free to load/unload components in this file
+ *
+ * By default all components are loaded from POOL folder, however
+ * when working on project it is recommended to add/modify files
+ * in APP folder
+ *
+ * ScalablaCSS devs will not normally modify APP folder, only POOL
  * 
  * Do NOT load components from inside other components
  *	  ..by doing so you may lose control over them
@@ -26,6 +32,19 @@
  * ----------------------------------------------------------------- */
 
 
+/*------------------------------------*\
+	CONTENTS
+\*------------------------------------*/
+/*
+INITIALIZE
+COMBINE STYLES
+ADD PLUGINS & HELPERS
+*/
+
+
+
+
+
 /*-------------------------------------------------------------------*\
 	INITIALIZE
 
@@ -34,40 +53,40 @@
 	This will not be outputted in compiled stylesheet "as is"
 \*-------------------------------------------------------------------*/
 // Variables
-@import 'app/variables.less';     			// Custom colors, font-sizes, etc.
+@import 'pool/variables/variables.less'; 	// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
-@import 'app/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
+@import 'pool/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
 
 
 /*-------------------------------------------------------------------*\
-	COMBINE FRAMGENTS
+	COMBINE STYLES
 
-	Combine FRAMGENTS that are using LESS
-	Variables and Functions	to style the page
-	This will be outputted in compiled stylesheet as is
+	Combine STYLES that are using LESS
+	Variables and Mixins to style the page
+	This will be outputted in compiled stylesheet
 	You can split this part into as many files as you need
 \*-------------------------------------------------------------------*/
 // Main styling
-@import 'app/fragments/normalize.css';      // Normalize browser CSS default styles
-@import 'app/fragments/typography.less';    // Typography styles
-@import 'app/fragments/styles.less';        // Elements-specific styles
+@import 'pool/styles/normalize.css/normalize.css';  // Normalize browser CSS default styles
+@import 'pool/styles/typography.less';    			// Typography styles
+@import 'pool/styles/styles.less';        			// Elements-specific styles
 
 // Screen Layout
-@import 'app/layouts/320up.less'; 			// For responsive design, use layout suited to small-screen devices
-.320up();                         			// For modern browsers we will add media queries in a separate file
-											// For old IE we will overwrite this layout with another one
-											// For non-responsive design, just load your only layout here
+@import 'pool/layouts/320up.less'; 				// For responsive design, use layout suited to small-screen devices
+.320up();                         				// For modern browsers we will add media queries in a separate file
+												// For old IE we will overwrite this layout with another one
+												// For non-responsive design, just load your only layout here
 
 // Print layout
-@import 'app/layouts/print.less'; 			// Inlined to avoid required HTTP connection: h5bp.com/r
+@import 'pool/layouts/print.less'; 				// Inlined to avoid required HTTP connection: h5bp.com/r
 @media print {
 	.print();
 }
 
 
 /*-------------------------------------------------------------------*\
-	ADD MODULES & HELPERS
+	ADD PLUGINS & HELPERS
 
 	Undependent components that have no relationship
 	with other components
@@ -75,9 +94,9 @@
 // Helpers - undependent small reusable CSS snippets consisting of pure CSS only
 // These shouldn't be used by other .less files, only by HTML elements via classes
 // Helper Example:     	.left { text-align: left; }
-// Load Example: 		@import 'app/helpers/helper_name/helper_name.less';
+// Load Example: 		@import 'pool/helpers/helper_name/helper_name.less';
 
-// Modules - undependent UI elements
+// Plugins - undependent UI elements
 // These shouldn't be used by other .less files, only by HTML elements via classes and IDs
-// Module Example:		a "media object" with an image to the left and descriptive content to the right
-// Load Example: 		@import 'app/modules/module_name/module_name.less';
+// Plugin Example:		a "media object" with an image to the left and descriptive content to the right
+// Load Example: 		@import 'pool/plugins/plugin_name/plugin_name.less';
