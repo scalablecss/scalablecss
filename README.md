@@ -11,10 +11,10 @@ Installation
 --------------------
 
 ``` html
-git clone git://github.com/scalablecss/scalablecss.git scalablecss
-git cd scalablecss
-git submodule init
-git submodule update
+$ git clone git://github.com/scalablecss/scalablecss.git scalablecss
+$ cd scalablecss
+$ git submodule init
+$ git submodule update
 ```
 
 Credits
