@@ -15,7 +15,7 @@ $ git clone git://github.com/scalablecss/scalablecss.git scalablecss
 $ cd scalablecss
 $ git submodule init
 $ git submodule update
-$ cd less/pool && git checkout master
+$ cd src/pool && git checkout master
 $ git submodule init
 $ git submodule update
 ```
