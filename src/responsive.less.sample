@@ -30,10 +30,10 @@ DEFINE LAYOUTS
 	Declare LESS variables and mixins (LESS Functions)
 \*-------------------------------------------------------------------*/
 // Variables
-@import 'pool/variables/variables.less';    // Custom colors, font-sizes, etc
+@import 'system/variables/variables.less';    // Custom colors, font-sizes, etc
 
 // Mixins - LESS Functions
-@import 'pool/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
+@import 'system/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
 
 
 /*-------------------------------------------------------------------*\
@@ -42,11 +42,11 @@ DEFINE LAYOUTS
 	Use media queries to assign layouts to different screens
 \*-------------------------------------------------------------------*/
 // Preload layouts mixins 
-@import 'pool/layouts/480up.less';
-@import 'pool/layouts/600up.less';
-@import 'pool/layouts/768up.less';
-@import 'pool/layouts/992up.less';
-@import 'pool/layouts/1382up.less';
+@import 'system/layouts/480up.less';
+@import 'system/layouts/600up.less';
+@import 'system/layouts/768up.less';
+@import 'system/layouts/992up.less';
+@import 'system/layouts/1382up.less';
 
 // Assign layouts to different screen sizes
 /* 480px */

@@ -53,10 +53,10 @@ ADD PLUGINS & HELPERS
 	This will not be outputted in compiled stylesheet "as is"
 \*-------------------------------------------------------------------*/
 // Variables
-@import 'pool/variables/variables.less'; 	// Custom colors, font-sizes, etc.
+@import 'system/variables/variables.less'; 	// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
-@import 'pool/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
+@import 'system/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
 
 
 /*-------------------------------------------------------------------*\
@@ -68,18 +68,18 @@ ADD PLUGINS & HELPERS
 	You can split this part into as many files as you need
 \*-------------------------------------------------------------------*/
 // Main styling
-@import 'pool/styles/reset.less';  					// Reset browser CSS default styles
-@import 'pool/styles/typography.less';    			// Typography styles
-@import 'pool/styles/content.less';        			// Elements-specific styles
+@import 'system/styles/reset.less';  					// Reset browser CSS default styles
+@import 'system/styles/typography.less';    			// Typography styles
+@import 'system/styles/content.less';        			// Elements-specific styles
 
 // Screen Layout
-@import 'pool/layouts/320up.less'; 				// For responsive design, use layout suited to small-screen devices
+@import 'system/layouts/320up.less'; 				// For responsive design, use layout suited to small-screen devices
 .320up();                         				// For modern browsers we will add media queries in a separate file
 												// For old IE we will overwrite this layout with another one
 												// For non-responsive design, just load your only layout here
 
 // Print layout
-@import 'pool/layouts/print.less'; 				// Inlined to avoid required HTTP connection: h5bp.com/r
+@import 'system/layouts/print.less'; 				// Inlined to avoid required HTTP connection: h5bp.com/r
 @media print {
 	.print();
 }
@@ -94,9 +94,9 @@ ADD PLUGINS & HELPERS
 // Helpers - undependent small reusable CSS snippets consisting of pure CSS only
 // These shouldn't be used by other .less files, only by HTML elements via classes
 // Helper Example:     	.left { text-align: left; }
-// Load Example: 		@import 'pool/helpers/helper_name/helper_name.less';
+// Load Example: 		@import 'system/helpers/helper_name/helper_name.less';
 
 // Plugins - undependent UI elements
 // These shouldn't be used by other .less files, only by HTML elements via classes and IDs
 // Plugin Example:		a "media object" with an image to the left and descriptive content to the right
-// Load Example: 		@import 'pool/plugins/plugin_name/plugin_name.less';
+// Load Example: 		@import 'system/plugins/plugin_name/plugin_name.less';

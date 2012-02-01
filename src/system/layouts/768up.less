@@ -1,0 +1,24 @@
+/*
+ * layouts/768up.less
+ * ======================
+ * Layout mixin for tablets
+ * ----------------------------------------------------------------- */
+
+ .768up(){
+
+ 	body {
+		font-size: 18px;
+	}
+
+	.grid();
+	/* set maximum width of container and align in center */
+	.container {
+		width: 100%;
+		min-width: 768px;
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+
+	.debugmessage("media query (768>) fired", blue);
+
+}

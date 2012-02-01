@@ -1,0 +1,72 @@
+/*
+ * mixins/grid.less 
+ * ====================
+ * Useful mixins used to define the layout
+ *
+ * ----------------------------------------------------------------- */
+
+
+/*-------------------------------------------------------------------*\
+        Clearfix
+\*-------------------------------------------------------------------*/
+.clearfix() {
+        *zoom:1;
+        
+        &:before,
+        &:after {
+            content:"";
+            display:table;
+        }
+        &:after {
+            clear:both;
+        }
+}
+
+.grid() {
+	.line { width: 100%; }
+    .line, .lastUnit, .container { overflow:hidden; *overflow:visible; *zoom:1; }
+}
+
+/*-------------------------------------------------------------------*\
+        Mixin to apply fluid grid
+        (standard for all screens, you just have to decide when to apply it)
+        Originally created by https://github.com/stubbornella/oocss
+\*-------------------------------------------------------------------*/
+.fluid() {
+    .size1of1{float:none;}
+    .size1of2{width:50%;}
+    .size1of3{width:33.33333%;}
+    .size2of3{width:66.66666%;}
+    .size1of4{width:25%;}
+    .size3of4{width:75%;}
+    .size1of5{width:20%;}
+    .size2of5{width:40%;}
+    .size3of5{width:60%;}
+    .size4of5{width:80%;}
+    .unit{float:left;}
+    .unitRight{float:right;}
+    .lastUnit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
+}
+
+/*-------------------------------------------------------------------*\
+        Debugging functions
+\*-------------------------------------------------------------------*/
+.debugmessage(@message, @color: red ){
+    body.debug::before{
+        content: @message;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        background: @color;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: 99;
+        height: 24px;
+        line-height: 24px;
+    }
+    body.debug {
+           margin-top: 24px;
+    }
+}

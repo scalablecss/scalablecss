@@ -30,14 +30,14 @@ DEFINE LAYOUT FOR IE
 	Declare LESS variables and mixins (LESS Functions)
 \*-------------------------------------------------------------------*/
 // Variables
-@import 'pool/variables/variables.less';     			// Custom colors, font-sizes, etc.
+@import 'system/variables/variables.less';     			// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
-@import 'pool/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
+@import 'system/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
 
 
 /*-------------------------------------------------------------------*\
 	DEFINE LAYOUT FOR IE
 \*-------------------------------------------------------------------*/
-@import 'pool/layouts/768up.less';
+@import 'system/layouts/768up.less';
 .768up();

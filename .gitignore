@@ -1,0 +1,19 @@
+# Ignore compiled CSS #
+################
+css/*
+
+# Only track /system/* and *.sample files #
+##########################################
+src/*
+!src/*.sample
+!src/system/
+
+# OS generated and misc files #
+###############################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
+*~
+empty
