@@ -16,8 +16,8 @@
 	CONTENTS
 \*------------------------------------*/
 /*
-INITIALIZE
-DEFINE LAYOUT FOR IE
+LOAD VARIABLES & MIXINS
+ASSIGN LAYOUT FOR IE
 */
 
 
@@ -25,19 +25,19 @@ DEFINE LAYOUT FOR IE
 
 
 /*-------------------------------------------------------------------*\
-	INITIALIZE
+	LOAD VARIABLES & MIXINS
 
 	Declare LESS variables and mixins (LESS Functions)
 \*-------------------------------------------------------------------*/
 // Variables
-@import 'system/variables/variables.less';     			// Custom colors, font-sizes, etc.
+@import 'system/variables/variables.less';     		// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
 @import 'system/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
 
 
 /*-------------------------------------------------------------------*\
-	DEFINE LAYOUT FOR IE
+	ASSIGN LAYOUT FOR IE
 \*-------------------------------------------------------------------*/
 @import 'system/layouts/768up.less';
 .768up();
