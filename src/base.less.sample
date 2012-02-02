@@ -7,17 +7,16 @@
  *
  * Feel free to load/unload components in this file
  *
- * By default all components are loaded from POOL folder, however
+ * By default all components are loaded from SYSTEM folder, however
  * when working on project it is recommended to add/modify files
- * in APP folder
+ * in APP folder because it is not tracked by git and it is not likely
+ * that ScalableCSS contributors will ever touch it
  *
- * ScalablaCSS devs will not normally modify APP folder, only POOL
- * 
  * Do NOT load components from inside other components
  *	  ..by doing so you may lose control over them
  *
- * For non-responsive design this file should contain
- *	  everything you need in most cases
+ * For non-responsive design this stylesheet should be all you need
+ * in most cases
  *
  * For responsive design, it's recommended to load layout
  * 	  that is suited to small-screen devices in this stylesheet
@@ -36,9 +35,10 @@
 	CONTENTS
 \*------------------------------------*/
 /*
-INITIALIZE
-COMBINE STYLES
-ADD PLUGINS & HELPERS
+VARIABLES & MIXINS
+STYLES
+LAYOUTS
+PLUGINS & HELPERS
 */
 
 
@@ -46,21 +46,22 @@ ADD PLUGINS & HELPERS
 
 
 /*-------------------------------------------------------------------*\
-	INITIALIZE
+	VARIABLES & MIXINS
 
 	Declare LESS variables and mixins (LESS Functions)
 	Most of the customization usually is done here
-	This will not be outputted in compiled stylesheet "as is"
+	This will not be outputted in compiled stylesheet "as is",
+	Only be used by other components
 \*-------------------------------------------------------------------*/
 // Variables
 @import 'system/variables/variables.less'; 	// Custom colors, font-sizes, etc.
 
 // Mixins - LESS Functions
-@import 'system/mixins/grid.less';  			// Grid system - Clearfix & Debug mixins included
+@import 'system/mixins/grid.less';  		// Grid system - Clearfix & Debug mixins included
 
 
 /*-------------------------------------------------------------------*\
-	COMBINE STYLES
+	STYLES
 
 	Combine STYLES that are using LESS
 	Variables and Mixins to style the page
@@ -68,35 +69,41 @@ ADD PLUGINS & HELPERS
 	You can split this part into as many files as you need
 \*-------------------------------------------------------------------*/
 // Main styling
-@import 'system/styles/reset.less';  					// Reset browser CSS default styles
-@import 'system/styles/typography.less';    			// Typography styles
-@import 'system/styles/content.less';        			// Elements-specific styles
+@import 'system/styles/reset.less';  		// Reset browser default styles
+@import 'system/styles/typography.less';    	// Typography styles
+@import 'system/styles/content.less';        	// Elements-specific styles
 
+
+/*-------------------------------------------------------------------*\
+	LAYOUTS
+
+	Import and load a layout
+\*-------------------------------------------------------------------*/
 // Screen Layout
-@import 'system/layouts/320up.less'; 				// For responsive design, use layout suited to small-screen devices
-.320up();                         				// For modern browsers we will add media queries in a separate file
-												// For old IE we will overwrite this layout with another one
-												// For non-responsive design, just load your only layout here
+@import 'system/layouts/320up.less'; 		// For responsive design, use layout suited to small-screen devices
+.320up();                         		// For modern browsers we will add media queries in a separate file
+							// For old IE we will overwrite this layout with another one
+							// For non-responsive design, just load your only layout here
 
 // Print layout
-@import 'system/layouts/print.less'; 				// Inlined to avoid required HTTP connection: h5bp.com/r
+@import 'system/layouts/print.less'; 		// Inlined to avoid required HTTP connection: h5bp.com/r
 @media print {
 	.print();
 }
 
 
 /*-------------------------------------------------------------------*\
-	ADD PLUGINS & HELPERS
+	PLUGINS & HELPERS
 
 	Undependent components that have no relationship
-	with other components
+	with others
 \*-------------------------------------------------------------------*/
 // Helpers - undependent small reusable CSS snippets consisting of pure CSS only
 // These shouldn't be used by other .less files, only by HTML elements via classes
 // Helper Example:     	.left { text-align: left; }
-// Load Example: 		@import 'system/helpers/helper_name/helper_name.less';
+// Load Example: 	@import 'app/helpers/helper_name/helper_name.less';
 
 // Plugins - undependent UI elements
 // These shouldn't be used by other .less files, only by HTML elements via classes and IDs
-// Plugin Example:		a "media object" with an image to the left and descriptive content to the right
-// Load Example: 		@import 'system/plugins/plugin_name/plugin_name.less';
+// Plugin Example:	a "media object" with an image to the left and descriptive content to the right
+// Load Example: 	@import 'app/plugins/plugin_name/plugin_name.less';
