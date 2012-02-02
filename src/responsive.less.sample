@@ -16,8 +16,8 @@
 	CONTENTS
 \*------------------------------------*/
 /*
-INITIALIZE
-DEFINE LAYOUTS
+VARIABLES & MIXINS
+LAYOUTS
 */
 
 
@@ -37,9 +37,9 @@ DEFINE LAYOUTS
 
 
 /*-------------------------------------------------------------------*\
-	DEFINE LAYOUTS
+	LAYOUTS
 
-	Use media queries to assign layouts to different screens
+	Use media queries to assign layouts to different screen sizes
 \*-------------------------------------------------------------------*/
 // Preload layouts mixins 
 @import 'system/layouts/480up.less';
