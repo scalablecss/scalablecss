@@ -16,4 +16,7 @@ Icon?
 Thumbs.db
 *.swp
 *~
-empty
+
+# Don't ignore placeholders #
+#############################
+!empty
