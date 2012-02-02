@@ -8,15 +8,13 @@ src/*
 !src/*.sample
 !src/system/
 
-# OS generated and misc files #
-###############################
-.DS_Store*
+# Generic files to ignore #
+###########################
+.DS_Store
 ehthumbs.db
 Icon?
 Thumbs.db
+*.lock
+*.out
 *.swp
 *~
-
-# Don't ignore placeholders #
-#############################
-!empty
