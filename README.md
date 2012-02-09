@@ -1,4 +1,4 @@
-ScalableCSS
+ScalableCSS !
 ====================
 
 ScalableCSS is a CSS framework based on LESS CSS preprocessor (http://lesscss.org). It's main purpose is to let you manage and extend website's stylesheets easily.
