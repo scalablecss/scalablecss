@@ -1,13 +1,3 @@
-# Ignore compiled CSS #
-################
-css/*
-
-# Only track /system/* and *.sample files #
-##########################################
-src/*
-!src/*.sample
-!src/system/
-
 # Generic files to ignore #
 ###########################
 .DS_Store
