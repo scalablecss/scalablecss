@@ -3,7 +3,7 @@ ScalableCSS !
 
 ScalableCSS is a CSS framework based on LESS CSS preprocessor (http://lesscss.org). It's main purpose is to let you manage and extend website's stylesheets easily.
 
-It comes with integrated customized version of Semantic Grid System (http://semantic.gs) by default, however you can use any Grid System you like instead if you need any at all.
+It comes with integrated OOCSS Grid (http://github.com/stubbornella/oocss/wiki/Grids) by default, however you can use any Grid System you like instead if you need any at all.
 
 Code and comments are self explanatory so you should feel fine by reading through the source. A good starting point is 'less/base.less', which is an example of root stylesheet file. You can create multiple siblings of base.less and all of them will use the same codebase which is highly flexible when it comes to managing multiple stylesheets. However, in most cases it's recommended to have only one stylesheet (like base.less) per website for non-responsive designs. Read the comments in base.less for more info.
 
@@ -11,7 +11,20 @@ Installation
 --------------------
 
 ``` html
-$ git clone git://github.com/scalablecss/scalablecss.git
+$ git remote add -f scalablecss git://github.com/scalablecss/scalablecss.git
+$ git merge -s ours --no-commit cork/master
+$ mkdir scalablecss
+$ git read-tree --prefix=scalablecss/system/ -u scalablecss/master
+$ cd scalablecss && cp -r system/setup_files/* ./
+$ git add .
+$ git commit -m "Added ScalableCSS as Subtree"
+```
+
+Get up to date (pull in framework's changes)
+--------------------
+
+``` html
+$ git pull -s subtree scalablecss master
 ```
 
 Credits
