@@ -15,7 +15,7 @@ Installation via Sub-tree script (recommended)
 $ mkdir scalablecss
 $ git remote add scalablecss git://github.com/scalablecss/scalablecss.git
 $ git fetch scalablecss
-$ git subtree add -P scalablecss/system -m 'added ScalableCSS as a subproject' scalablecss/master
+$ git subtree add -P scalablecss/system --squash -m 'added ScalableCSS as a subproject' scalablecss/master
 $ cp -r scalablecss/system/setup_files/* scalablecss/
 $ git add .
 $ git commit -m 'initialized new scalablecss project'
@@ -26,7 +26,7 @@ Get up to date via Sub-tree script (recommended)
 
 ``` html
 $ git fetch scalablecss
-$ git subtree merge -P scalablecss/system -m 'upgraded ScalableCSS to the latest state' scalablecss/master
+$ git subtree merge -P scalablecss/system --squash -m 'upgraded ScalableCSS to the latest state' scalablecss/master
 ```
 
 
