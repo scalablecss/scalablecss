@@ -7,8 +7,10 @@ It comes with integrated OOCSS Grid (http://github.com/stubbornella/oocss/wiki/G
 
 Code and comments are self explanatory so you should feel fine by reading through the source. A good starting point is 'less/base.less', which is an example of root stylesheet file. You can create multiple siblings of base.less and all of them will use the same codebase which is highly flexible when it comes to managing multiple stylesheets. However, in most cases it's recommended to have only one stylesheet (like base.less) per website for non-responsive designs. Read the comments in base.less for more info.
 
-Install as a Submodule (recommended)
+Install ScalableCSS from within your main repo
 --------------------
+
+You most likely would want to integrate ScalableCSS into your existing project. So we assume you've already changed directory to your project.
 
 ``` html
 $ git submodule add git://github.com/scalablecss/scalablecss.git scalablecss/system
@@ -17,7 +19,7 @@ $ git add .gitmodules scalablecss/*
 $ git commit -m 'Installed ScalableCSS as a Submodule'
 ```
 
-Get up to date as a Submodule (recommended)
+Upgrade ScalableCSS from within your main repo
 --------------------
 
 ``` html
@@ -27,47 +29,13 @@ $ git commit -m 'Upgraded ScalableCSS to the latest state'
 ```
 
 
-Installation via Sub-tree script
+Cloning your repo
 --------------------
 
-``` html
-$ mkdir scalablecss
-$ git remote add scalablecss git://github.com/scalablecss/scalablecss.git
-$ git fetch scalablecss
-$ git subtree add -P scalablecss/system --squash -m 'added ScalableCSS as a subproject' scalablecss/master
-$ cp -r scalablecss/system/setup_files/* scalablecss/
-$ git add .
-$ git commit -m 'initialized new scalablecss project'
-```
-
-Get up to date via Sub-tree script
---------------------
+Use --recursive flag in order to retrieve submodules files together with your main repo
 
 ``` html
-$ git fetch scalablecss
-$ git subtree merge -P scalablecss/system --squash -m 'upgraded ScalableCSS to the latest state' scalablecss/master
-```
-
-
-
-Installation via subtree merging
---------------------
-
-``` html
-$ git remote add -f scalablecss git://github.com/scalablecss/scalablecss.git
-$ git merge -s ours --no-commit cork/master
-$ mkdir scalablecss
-$ git read-tree --prefix=scalablecss/system/ -u scalablecss/master
-$ cd scalablecss && cp -r system/setup_files/* ./
-$ git add .
-$ git commit -m "Added ScalableCSS as Subtree"
-```
-
-Get up to date via subtree merging
---------------------
-
-``` html
-$ git pull -s subtree scalablecss master
+$ git clone --recursive git://your_main_repo_path
 ```
 
 Credits
