@@ -69,7 +69,7 @@ PLUGINS & HELPERS
 	You can split this part into as many files as you need
 \*-------------------------------------------------------------------*/
 // Main styling
-@import 'system/styles/reset.less';  		// Reset browser default styles
+@import 'system/styles/normalize.less';  		// Normalize browser default styles
 @import 'system/styles/typography.less';    	// Typography styles
 @import 'system/styles/content.less';        	// Elements-specific styles
 
