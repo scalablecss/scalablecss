@@ -7,22 +7,27 @@ It comes with integrated OOCSS Grid (http://github.com/stubbornella/oocss/wiki/G
 
 Code and comments are self explanatory so you should feel fine by reading through the source. A good starting point is 'less/base.less', which is an example of root stylesheet file. You can create multiple siblings of base.less and all of them will use the same codebase which is highly flexible when it comes to managing multiple stylesheets. However, in most cases it's recommended to have only one stylesheet (like base.less) per website for non-responsive designs. Read the comments in base.less for more info.
 
-Install as a Submodule
+Install as a Submodule (recommended)
 --------------------
 
 ``` html
-..To be added soon..
+$ git submodule add git://github.com/scalablecss/scalablecss.git scalablecss/system
+$ cp -r scalablecss/system/setup_files/* scalablecss/
+$ git add .gitmodules scalablecss/*
+$ git commit -m 'Installed ScalableCSS as a Submodule'
 ```
 
-Get up to date as a Submodule
+Get up to date as a Submodule (recommended)
 --------------------
 
 ``` html
-..To be added soon..
+$ cd scalablecss/system && git pull && cd ../../
+$ git add scalablecss/system
+$ git commit -m 'Upgraded ScalableCSS to the latest state'
 ```
 
 
-Installation via Sub-tree script (recommended)
+Installation via Sub-tree script
 --------------------
 
 ``` html
@@ -35,7 +40,7 @@ $ git add .
 $ git commit -m 'initialized new scalablecss project'
 ```
 
-Get up to date via Sub-tree script (recommended)
+Get up to date via Sub-tree script
 --------------------
 
 ``` html
