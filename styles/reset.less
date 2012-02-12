@@ -11,20 +11,6 @@ html {
 
 body,
 div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
 form,
 fieldset,
 legend,
@@ -43,25 +29,23 @@ table {
 	border-spacing: 0;
 }
 
-fieldset,
-img {
+img,
+a img,
+fieldset {
 	border: 0;
 }
 
-address,
-caption,
-cite,
-code,dfn,
-em,
-strong,
-th,
-var {
-	font-style: normal;
-	font-weight: normal;
+em {
+	font-style: italic;
 }
 
-li {
-	list-style: none;
+strong {
+	font-weight: bold;
+}
+
+
+ul, ol {
+	list-style-type: none;
 }
 
 caption,
@@ -69,34 +53,12 @@ th {
 	text-align: left;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-size: 100%;
-	font-weight: normal;
-}
 
 q:before,
 q:after {
 	content: '';
 }
 
-abbr,
-acronym {
-	border: 0;
-	font-variant: normal;
-}
-
-sup {
-	vertical-align: text-top;
-}
-
-sub {
-	vertical-align: text-bottom;
-}
 
 input,
 textarea,
@@ -112,46 +74,16 @@ select {
 	*font-size:100%;
 }
 
-legend {
-	color: #000;
+/*
+ * Vertical spacing
+ */
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+p, blockquote {
+	margin: 0 10px;
 }
-
-/* default sizing */
-h1, h2, h3, h4, h5, h6, ul, ol,dl, p, blockquote, .media { margin: 0 10px; }
-h1, h2, h3, h4, h5, h6,img { padding-bottom: 0; }
-pre { margin: 1px; }
-table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl { padding: 0; }
 
 /* html5 elements for older browsers */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display:block
-}
-
-/* fonts */
-body {
-	font: 13px/1.231 arial, helvetica, clean, sans-serif;
-	*font-size: small;
-	*font: x-small;
-}
-
-select,
-input,
-button,
-textarea {
-	font: 99% arial, helvetica, clean, sans-serif;
-}
-
-table {
-	font-size: inherit;
-	font: 100%;
-}
-
-pre,
-code,
-kbd,
-samp,
-tt {
-	font-family: monospace;
-	*font-size: 108%;
-	line-height: 100%;
 }
