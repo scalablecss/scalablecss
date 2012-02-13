@@ -71,7 +71,7 @@ PLUGINS & HELPERS
 // Main styling
 @import 'system/styles/normalize.less';  		// Normalize browser default styles
 @import 'system/styles/typography.less';    	// Typography styles
-@import 'system/styles/content.less';        	// Elements-specific styles
+@import 'system/styles/general.less';  			// General styles (here you could keep styles which are not related to any other place)
 
 
 /*-------------------------------------------------------------------*\
