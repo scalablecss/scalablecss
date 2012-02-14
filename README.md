@@ -14,7 +14,9 @@ You most likely would want to integrate ScalableCSS into your existing project. 
 
 ``` html
 $ git submodule add git://github.com/scalablecss/scalablecss.git scalablecss/system
-$ cp -r scalablecss/system/setup_files/* scalablecss/
+$ cd scalablecss
+$ node system/setup.js
+$ cd ../
 $ git add .gitmodules scalablecss/*
 $ git commit -m 'Installed ScalableCSS as a Submodule'
 ```
