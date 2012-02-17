@@ -24,7 +24,7 @@
 
 .grid() {
 	.line { width: 100%; }
-    .line, .lastUnit, .container { overflow:hidden; *overflow:visible; *zoom:1; }
+    .line, .unit:last-child, .container { overflow:hidden; *overflow:visible; *zoom:1; }
 }
 
 /*-------------------------------------------------------------------*\
@@ -45,7 +45,7 @@
     .size4of5{width:80%;}
     .unit{float:left;}
     .unitRight{float:right;}
-    .lastUnit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
+    .unit:last-child{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
 }
 
 /*-------------------------------------------------------------------*\
