@@ -1,7 +1,8 @@
 /*
  * styles/typography.less
  * ===========================
- * Everything related to typography should be set here
+ * Define all typography related stylings here
+ * Everything related to fonts goes here
  * ----------------------------------------------------------------- */
 
 
@@ -12,7 +13,8 @@
 BODY
 LINKS
 HEADINGS
-TYPOGRAPHY
+MISC
+CUSTOM FONTS
 */
 
 
@@ -24,9 +26,9 @@ TYPOGRAPHY
 	$BODY
 \*------------------------------------*/
 body {
-	font-size: 100%;
 	font-family: @baseFamily;
 	color: @baseColor;
+	line-height: @baseLine;
 }
 
 /*------------------------------------*\
@@ -34,63 +36,46 @@ body {
 \*------------------------------------*/
 a {
 	color: @linkColor;
-	text-decoration: none;
 }
 a:hover {
 	color: @linkColorHover;
-	text-decoration: underline;
 }
 
 /*------------------------------------*\
 	$HEADINGS
 \*------------------------------------*/
-h1, .h1 {
-	font-size: 2em;
-	line-height: .75em;
+h1 {
+    font-size: 2em;
+    line-height: 0.75em;
+    font-weight: normal;
+	font-style: normal;
+    font-family: @h1-font;
+    color: @h1-color;
+}
 
-	font-weight: normal;
+h2 {
+    font-size: 1.5em;
+    line-height: 1.em;
+    font-weight: normal;
 	font-style: normal;
-	color: #AE0345;
+    font-family: @h1-font;
+    color: @h2-color;
 }
-h2, .h2 {
-	font-size: 1.5em;
-	line-height: 1em;
 
-	font-weight: normal;
+h3 {
+    font-size: 1.17em;
+    line-height: 1.282em;
+    font-weight: normal;
 	font-style: normal;
-	color: #AE0345;
-}
-h3, .h3 {
-	font-size: 1.2em;
-	line-height: 1.25em;
-
-	font-weight: bold;
-	font-style: normal;
-	color: #DF2B72;
-}
-h4, .h4 {
-	font-size: 1.2em;
-	line-height: 1.25em;
-
-	font-weight: normal;
-	font-style: normal;
-	color: #333;
-}
-h5, .h5 {
-	font-weight: bold;
-	font-style: normal;
-	color: #AE0345;
-}
-h6, .h6 {
-	font-weight: normal;
-	font-style: italic;
-	color: #333;
+    font-family: @h1-font;
+    color: @h3-color;
 }
 
 /*------------------------------------*\
-	$TYPOGRAPHY
+	$MISC
 \*------------------------------------*/
-p, ol, ul, blockquote, pre, code {
-  line-height: 1.5em;
-  margin-bottom: 1.5em;
-}
+
+
+/*------------------------------------*\
+	$CUSTOM FONTS
+\*------------------------------------*/
